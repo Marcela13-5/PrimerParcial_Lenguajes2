@@ -8,7 +8,7 @@ public class Vehiculo {
     private String referencia;
     private String velocidadMaxima;
 
-    private static int[] Garaje = new int[3];
+    private static Vehiculo[] garaje = new Vehiculo[3];
 
     public Vehiculo(String color, String referencia, String velocidadMaxima) {
         this.color = color;
@@ -21,6 +21,20 @@ public class Vehiculo {
         this.referencia = vehiculo.getReferencia();
         this.velocidadMaxima = vehiculo.getVelocidadMaxima();
 
+    }
+
+    public static boolean espacioGaraje(){
+        boolean garajeLleno = false;
+        int i;
+        for (i=0; i<garaje.length;i++){
+            if (garaje[i]== null){
+                garajeLleno = false;
+            }else {
+                garajeLleno = true;
+            }
+        }
+
+        return garajeLleno;
     }
 
     public String getColor() {
