@@ -4,8 +4,13 @@ public class Avion extends Vehiculo{
 
     private int altitudMaxima;
 
-    public Avion(Enum color, String referencia, String velocidadMaxima) {
+    public Avion(String color, String referencia, String velocidadMaxima) {
         super(color, referencia, velocidadMaxima);
+        this.altitudMaxima = altitudMaxima;
+    }
+
+    public Avion(Vehiculo vehiculo, int altitudMaxima){
+        super(vehiculo);
         this.altitudMaxima = altitudMaxima;
     }
 

@@ -5,8 +5,13 @@ public class Carro extends Vehiculo{
     private int numeroDePuertas;
 
 
-    public Carro(Enum color, String referencia, String velocidadMaxima) {
+    public Carro(String color, String referencia, String velocidadMaxima) {
         super(color, referencia, velocidadMaxima);
+        this.numeroDePuertas = numeroDePuertas;
+    }
+
+    public Carro(Vehiculo vehiculo, int numeroDePuertas){
+        super(vehiculo);
         this.numeroDePuertas = numeroDePuertas;
     }
 

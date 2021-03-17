@@ -4,8 +4,13 @@ public class Yate extends Vehiculo{
 
     private int pesoMaximo;
 
-    public Yate(Enum color, String referencia, String velocidadMaxima) {
+    public Yate(String color, String referencia, String velocidadMaxima) {
         super(color, referencia, velocidadMaxima);
+        this.pesoMaximo = pesoMaximo;
+    }
+
+    public Yate(Vehiculo vehiculo, int pesoMaximo){
+        super(vehiculo);
         this.pesoMaximo = pesoMaximo;
     }
 
