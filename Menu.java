@@ -30,11 +30,17 @@ public class Menu {
 
                     case 1:
 
+
                         boolean arregloConEspacio = Vehiculo.espacioGaraje();
+                        if (arregloConEspacio){
+                            System.out.println("");
+                            System.out.println("No hay espacio en el garaje");
+                            System.out.println("");
+                        }
                         boolean salir1 = false;
                         int opcionMenu1;
 
-                        if (arregloConEspacio){
+                        if (!arregloConEspacio){
                             while (!salir1) {
 
                                 System.out.println("Que vehiculo deseas agregar:");
@@ -83,6 +89,7 @@ public class Menu {
                             }
 
                         }
+
                         break;
 
 
