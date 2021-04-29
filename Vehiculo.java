@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class Vehiculo {
 
-    private String color;
+    private Color color;
     private String referencia;
-    private String velocidadMaxima;
+    private double velocidadMaxima;
 
-    private static Vehiculo[] garaje = new Vehiculo[3];
+    //private static Vehiculo[] garaje = new Vehiculo[3];
 
-    public Vehiculo(String color, String referencia, String velocidadMaxima) {
+    public Vehiculo(Color color, String referencia, double velocidadMaxima) {
         this.color = color;
         this.referencia = referencia;
         this.velocidadMaxima = velocidadMaxima;
@@ -20,24 +20,9 @@ public class Vehiculo {
         this.color = vehiculo.getColor();
         this.referencia = vehiculo.getReferencia();
         this.velocidadMaxima = vehiculo.getVelocidadMaxima();
-
     }
 
-    public static boolean espacioGaraje(){
-        boolean garajeLleno = false;
-        int i;
-        for (i=0; i<garaje.length;i++){
-            if (garaje[i]== null){
-                garajeLleno = false;
-            }else {
-                garajeLleno = true;
-            }
-        }
-
-        return garajeLleno;
-    }
-
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
@@ -45,7 +30,7 @@ public class Vehiculo {
         return referencia;
     }
 
-    public String getVelocidadMaxima() {
+    public double getVelocidadMaxima() {
         return velocidadMaxima;
     }
 

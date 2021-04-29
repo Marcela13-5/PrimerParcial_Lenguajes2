@@ -5,7 +5,7 @@ public class Carro extends Vehiculo{
     private int numeroDePuertas;
 
 
-    public Carro(String color, String referencia, String velocidadMaxima) {
+    public Carro(Color color, String referencia, double velocidadMaxima) {
         super(color, referencia, velocidadMaxima);
         this.numeroDePuertas = numeroDePuertas;
     }

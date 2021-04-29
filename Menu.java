@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Menu {
     public static void menuGaraje() {
+        Garaje garaje = new Garaje();
         InfoVehiculo infoVehiculo = new InfoVehiculo();
 
         Scanner teclado = new Scanner(System.in);
@@ -31,10 +32,10 @@ public class Menu {
                     case 1:
 
 
-                        boolean arregloConEspacio = Vehiculo.espacioGaraje();
+                        boolean arregloConEspacio = Garaje.espacioGaraje();
                         if (arregloConEspacio){
                             System.out.println("");
-                            System.out.println("No hay espacio en el garaje");
+                            System.out.println("No hay espacio en el Garaje");
                             System.out.println("");
                         }
                         boolean salir1 = false;
@@ -58,15 +59,15 @@ public class Menu {
                                     switch (opcionMenu1){
 
                                         case 1:
-                                            infoVehiculo.ingresarInfoAvion();
+                                            garaje.agregarVehiculo(infoVehiculo.ingresarInfoAvion());
                                             break;
 
                                         case 2:
-                                            infoVehiculo.ingresarInfoYate();
+                                            garaje.agregarVehiculo(infoVehiculo.ingresarInfoYate());
                                             break;
 
                                         case 3:
-                                            infoVehiculo.ingresarInfoCarro();
+                                            garaje.agregarVehiculo(infoVehiculo.ingresarInfoCarro());
 
                                         case 4:
                                             System.out.println("Has seleccionado la opción salir, muchas gracias por visitarnos");
@@ -94,6 +95,7 @@ public class Menu {
 
 
                     case 2:
+                        garaje.mostrarVehiculos();
                         break;
                     case 3:
                         System.out.println("Has seleccionado la opción salir, muchas gracias por visitarnos");
