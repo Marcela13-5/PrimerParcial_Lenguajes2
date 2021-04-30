@@ -17,11 +17,13 @@ public class InfoVehiculo {
         String referencia = teclado.nextLine();
 
         System.out.println("Ingrese la velocidad maxima del Vehiculo");
-        double velocidadMaxima = Double.parseDouble(teclado.nextLine());//REVISAR COMO SE HARA INGRESO DEL double
+        double velocidadMaxima = Double.parseDouble(teclado.nextLine());
 
-        return new Vehiculo(color,referencia,velocidadMaxima);
-
-
+        return new Vehiculo.VehiculoBuilder()
+                .color(color)
+                .referencia(referencia)
+                .velocidadMaxima(velocidadMaxima)
+                .build();
     }
 
     private static Color menuColores(){

@@ -8,8 +8,6 @@ public class Vehiculo {
     private String referencia;
     private double velocidadMaxima;
 
-    //private static Vehiculo[] garaje = new Vehiculo[3];
-
     public Vehiculo(Color color, String referencia, double velocidadMaxima) {
         this.color = color;
         this.referencia = referencia;
@@ -38,6 +36,36 @@ public class Vehiculo {
         return "Color: " + color +
                 " Referencia: " + referencia +
                 " Velocidad Máxima: " + velocidadMaxima;
+    }
+
+
+    public static  class VehiculoBuilder {
+
+        private Color color;
+        private String referencia;
+        private double velocidadMaxima;
+
+
+        public VehiculoBuilder color(Color color){
+            this.color = color;
+            return this;
+        }
+
+        public VehiculoBuilder referencia(String referencia){
+            this.referencia = referencia;
+            return this;
+        }
+
+
+        public VehiculoBuilder velocidadMaxima(double velocidadMaxima){
+            this.velocidadMaxima = velocidadMaxima;
+            return this;
+        }
+
+        public Vehiculo build(){
+            return new Vehiculo(color,referencia,velocidadMaxima);
+        }
+
     }
 
 
