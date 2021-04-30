@@ -2,13 +2,19 @@ package com.company;
 
 public class Garaje {
 
-    public static int numMaxVehiculos = 10;
+    public static int numMaxVehiculos = 1;
 
     public static Vehiculo[] vehiculos = new Vehiculo[numMaxVehiculos];
 
     public void agregarVehiculo(Vehiculo vehiculo){
-        int celdaDisponible = espacioDisponible();
-        vehiculos[celdaDisponible] = vehiculo;
+        int i = espacioDisponible();
+        if(i == -1) {
+            System.out.println("No hay espacio en el garaje");
+            }else {
+            int celdaDisponible = espacioDisponible();
+            vehiculos[celdaDisponible] = vehiculo;
+        }
+
     }
 
     public void mostrarVehiculos(){
@@ -24,7 +30,6 @@ public class Garaje {
             if (vehiculos[i] == null){
                 return i;
             }
-
         }
         return -1;
     }
