@@ -2,7 +2,7 @@ package com.company;
 
 public class Garaje {
 
-    public static int numMaxVehiculos = 1;
+    public static int numMaxVehiculos = 3;
 
     public static Vehiculo[] vehiculos = new Vehiculo[numMaxVehiculos];
 
