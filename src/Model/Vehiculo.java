@@ -18,7 +18,7 @@ public class Vehiculo {
         this.velocidadMaxima = vehiculo.getVelocidadMaxima();
     }
 
-    public Color getColor() {
+    public static Color getColor() {
         return color;
     }
 
@@ -39,7 +39,7 @@ public class Vehiculo {
 
     public static  class VehiculoBuilder {
 
-        private Color color;
+        public Color color;
         private String referencia;
         private double velocidadMaxima;
 
