@@ -15,12 +15,14 @@ public class Garaje {
     }
 
     public void mostrarVehiculos(){
+        setVehiculo.stream()
+                .filter(vehiculo -> vehiculo.getColor == Color.AZUL || vehiculo.getColor == Color.NEGRO);
         setVehiculo.forEach(System.out::println);
     }
 
     List<ReferenciaVehiculo> referenciaVehiculo = setVehiculo.stream()
-            .filter(setVehiculo -> (Vehiculo.getColor() = Color.BLANCO) || (Vehiculo.getColor() = Color.VERDE))
-            .map(Vehiculo -> new ReferenciaVehiculo(Vehiculo.getReferencia()));
+            .filter(vehiculo -> (Vehiculo.getColor() = Color.BLANCO) || (Vehiculo.getColor() = Color.VERDE))
+            .map(vehiculo -> new ReferenciaVehiculo(Vehiculo.getReferencia()));
 
 
 }
