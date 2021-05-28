@@ -9,7 +9,7 @@ public class Carro extends Vehiculo {
         super(color, referencia, velocidadMaxima);
         this.numeroDePuertas = numeroDePuertas;
     }
-
+    /*ESTO ES UN COMENTARIO*/
     public Carro(Vehiculo vehiculo, int numeroDePuertas){
         super(vehiculo);
         this.numeroDePuertas = numeroDePuertas;

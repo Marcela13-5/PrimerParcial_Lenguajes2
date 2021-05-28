@@ -33,7 +33,7 @@ public class Menu {
                     case 1:
 
 
-                        boolean arregloConEspacio = Garaje.espacioGaraje();
+                        boolean arregloConEspacio = false;
                         if (arregloConEspacio){
                             System.out.println("");
                             System.out.println("No hay espacio en el Garaje");

@@ -8,7 +8,7 @@ public class Avion extends Vehiculo {
         super(color, referencia, velocidadMaxima);
         this.altitudMaxima = altitudMaxima;
     }
-
+    /*ESTO ES UN COMENTARIO*/
     public Avion(Vehiculo vehiculo, int altitudMaxima){
         super(vehiculo);
         this.altitudMaxima = altitudMaxima;
