@@ -21,12 +21,12 @@ public class Garaje {
         setVehiculo.forEach(System.out::println);
     }
 
-    public valorVelocidadMaxima(){
+    public void valorVelocidadMaxima(){
         setVehiculo.stream()
                 .max(Comparator.comparing(vehiculo -> vehiculo.getVelocidadMaxima()));
     }
 
-    public valorVelocidadMenor(){
+    public void valorVelocidadMenor(){
         setVehiculo.stream()
                 .min(Comparator.comparing(vehiculo -> vehiculo.getVelocidadMaxima()));
     }

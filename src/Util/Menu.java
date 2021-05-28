@@ -97,6 +97,11 @@ public class Menu {
 
                     case 2:
                         garaje.mostrarVehiculos();
+                        System.out.println("Vehiculo con Maxima Velocidad");
+                        garaje.valorVelocidadMaxima();
+                        System.out.println("Vehiculo con Minimo Velocidad");
+                        garaje.valorVelocidadMenor();
+
                         break;
                     case 3:
                         System.out.println("Has seleccionado la opción salir, muchas gracias por visitarnos");
