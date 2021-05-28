@@ -1,5 +1,5 @@
 package Model;
-/*ESTO ES UN COMENTARIO*/
+
 public class Yate extends Vehiculo {
 
     private int pesoMaximo;

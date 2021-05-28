@@ -1,5 +1,5 @@
 package Model;
-/*ESTO ES UN COMENTARIO*/
+
 public class Vehiculo {
 
     private Color color;

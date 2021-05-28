@@ -3,7 +3,7 @@ import Model.*;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-/*ESTO ES UN COMENTARIO*/
+
 public class InfoVehiculo {
 
     private static Scanner teclado = new Scanner(System.in);
